@@ -62,9 +62,7 @@ Outils de gestion d'environnements Docker. Portainer offre une interface Web com
 
 Pour déployer l'un de ces services sur une machine virtuelle vierge (Debian 12 ou 13), connectez-vous en SSH et exécutez la commande suivante. 
 
-*(⚠️ Pensez à remplacer `NOM_DU_SCRIPT.sh` par le nom réel du script que vous souhaitez utiliser, par exemple `install_glpi.sh`)* :
-
 ```bash
-curl -sO [https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/NOM_DU_SCRIPT.sh](https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/NOM_DU_SCRIPT.sh) && bash NOM_DU_SCRIPT.sh
+sudo apt update -y && sudo apt install -y curl && curl -sO https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/menu.sh && bash menu.sh
 
 Auteur : Valentin Prades | Licence : MIT
