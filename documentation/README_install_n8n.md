@@ -8,6 +8,7 @@ Ce script Bash automatise la préparation d'une machine virtuelle Debian (12 ou 
 * **Auto-élévation des droits :** Demande automatiquement les privilèges `sudo` si lancé par un utilisateur standard via l'interpréteur bash.
 * **Configuration Système :** Personnalisation du nom d'hôte (hostname) et du fuseau horaire (Europe/Paris).
 * **Configuration Réseau :** Mise en place interactive d'une adresse IP statique (IP, Masque, Passerelle, DNS).
+* **🌐 Patch DNS Anti-Coupure :** Maintient la résolution de nom active lors du rechargement des interfaces réseau pour garantir le téléchargement de Docker et des images n8n.
 * **Sécurité (UFW) :** Configuration du pare-feu pour n'autoriser que le SSH (port `22/tcp`) et l'accès web à l'interface n8n (port `5678/tcp`).
 * **Moteur Docker :** Installation automatique de Docker et du plugin Docker Compose v2.
 * **Déploiement Conteneurisé :** Création à la volée du fichier `docker-compose.yml` liant un conteneur n8n à un conteneur PostgreSQL robuste, avec création des volumes nécessaires pour ne jamais perdre vos données (workflows, identifiants, base de données).
@@ -17,34 +18,31 @@ Ce script Bash automatise la préparation d'une machine virtuelle Debian (12 ou 
 2. Un accès internet sur la machine.
 3. Un utilisateur avec les droits d'administration (`sudo`).
 4. **Configuration recommandée :** 2 à 4 vCPU, 4 à 8 Go de RAM, et 40 Go de stockage SSD.
+5. **FQDN (Recommandé) :** Avoir un nom de domaine pointant vers la machine si vous comptez utiliser des Webhooks externes.
 
 ## 🚀 Utilisation
 
-1. Créez le fichier sur votre machine virtuelle :
-   ```bash
-   nano install_n8n.sh
+Pour déployer n8n, nous vous recommandons d'utiliser le menu interactif global de ce dépôt. Sur votre machine vierge, lancez simplement la commande suivante :
 
-Collez le code du script, sauvegardez avec Ctrl+O puis Entrée, et quittez avec Ctrl+X)
-
-3. Lancez l'installation directement avec l'interpréteur bash :
-
-bash install_n8n.sh
+```bash
+sudo apt update -y && sudo apt install -y curl && curl -sO [https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/menu.sh](https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/menu.sh) && bash menu.sh
+```
 
 Laissez-vous guider par les questions interactives à l'écran.
 
-🏁 Après l'installation (Procédure de mise en place)
+## 🚀 Après l'installation (Procédure de mise en place)
 Une fois le script terminé, il vous sera proposé de redémarrer le serveur pour appliquer la nouvelle adresse IP statique.
 
-Étape 1 : L'initialisation
+1. L'initialisation
 
 Ouvrez votre navigateur web et rendez-vous sur : http://VOTRE_IP_STATIQUE:5678
 
-Étape 2 : Création du compte Propriétaire
+2. Création du compte Propriétaire
 
 Au tout premier lancement, l'interface de n8n vous demandera de créer le compte Administrateur (Owner).
 Remplissez simplement les champs avec votre adresse e-mail et un mot de passe fort pour sécuriser définitivement l'accès à votre instance.
 
-Étape 3 : Votre premier Workflow
+3. Votre premier Workflow
 
 Cliquez sur le bouton "Add workflow" (Ajouter un flux de travail) dans le menu de gauche.
 L'interface se présente comme une toile vierge. Cliquez sur le gros bouton "+" ou double-cliquez n'importe où pour ajouter votre premier nœud (Node).
