@@ -1,38 +1,35 @@
-# 🚀 Déploiement Automatisé : RustDesk Server sur Debian 12/13
+# 🐳 Installation Automatisée : Portainer & Lazydocker
 
-## 📝 Description
-Ce script Bash permet d'automatiser entièrement la préparation d'une machine virtuelle Debian 12/13 "fraîche" et le déploiement de **RustDesk Server** (alternative open-source à TeamViewer). Il configure le système de base, sécurise le réseau et installe les deux composants vitaux de RustDesk : `hbbs` (Serveur d'Identification) et `hbbr` (Serveur de Relais).
+Ce script Bash permet d'installer et de configurer rapidement les deux meilleurs outils de gestion pour votre environnement Docker : **Portainer** (Interface Web) et **Lazydocker** (Interface Terminal). 
+
+Il a été pensé pour être robuste, sécurisé et idéal pour un environnement Homelab (comme une VM ou un conteneur LXC sous Proxmox).
 
 ## ✨ Fonctionnalités
-* **Auto-élévation des droits :** Demande automatiquement les droits `sudo` si lancé par un utilisateur standard.
-* **Configuration Système :** Personnalisation du nom d'hôte (hostname) et du fuseau horaire (Europe/Paris).
-* **Configuration Réseau :** Mise en place interactive d'une adresse IP statique (IP, Masque, Passerelle, DNS).
-* **Sécurité (UFW) :** Configuration du pare-feu `ufw` avec ouverture stricte des ports requis par RustDesk :
-  * `22/tcp` (SSH)
-  * `21115` à `21119/tcp` (RustDesk TCP)
-  * `21116/udp` (RustDesk UDP)
-* **RustDesk Server :** Téléchargement dynamique des exécutables binaires purs, création des processus d'arrière-plan via `systemd` pour un démarrage automatique, et affichage en clair de la Clé Publique (Key) générée, indispensable pour chiffrer les connexions.
 
-## 🛠️ Prérequis
-1. Une machine virtuelle avec **Debian 12/13** fraîchement installée.
-2. Un accès internet sur la machine.
-3. Un utilisateur avec les droits d'administration (`sudo`).
+* **Escalade Sudo automatique :** Si vous oubliez de lancer le script en tant qu'administrateur, il relancera la commande automatiquement avec `sudo`.
+* **Tests de prérequis :** Vérifie la connexion Internet et la présence de Docker avant de lancer la moindre installation.
+* **Déploiement de Portainer CE :** Crée un volume persistant (`portainer_data`) pour ne pas perdre vos configurations lors des mises à jour, et déploie le conteneur sur les ports par défaut.
+* **Installation de Lazydocker :** Télécharge la dernière version officielle et la rend accessible à tous les utilisateurs du système.
+* **Affichage dynamique :** Détecte l'adresse IP locale de votre serveur pour générer un lien cliquable vers l'interface Web à la fin de l'installation.
+
+## 📋 Prérequis
+
+Avant d'exécuter ce script, assurez-vous que :
+1. Vous êtes sur une machine Linux (Debian, Ubuntu, etc.).
+2. **Docker est déjà installé** et fonctionnel sur votre machine.
+3. Votre utilisateur possède les droits `sudo`.
 
 ## 🚀 Utilisation
 
-1. Créez le fichier sur votre machine virtuelle :
-   ```bash
-   nano install_rustdesk.sh
+Pour déployer Portainer et Lazydocker, utilisez le menu interactif global de ce dépôt. Sur votre machine, lancez simplement la commande suivante :
 
-2. Collez le code du script
-3. Sauvegardez avec Ctrl+O puis Entrée, et quittez avec Ctrl+X
-4. Lancez l'installation directement avec l'interpréteur bash :
-
-bash install_rustdesk.sh
+```bash
+sudo apt update -y && sudo apt install -y curl && curl -sO [https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/menu.sh](https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/menu.sh) && bash menu.sh
+```
 
 Laissez-vous guider par les questions interactives à l'écran.
 
-🏁 Après l'installation
+## 🚀 Après l'installation
 Une fois le script terminé, il vous sera proposé de redémarrer le serveur pour appliquer la nouvelle adresse IP statique.
 
 Important : Notez bien la clé publique (Key) qui s'affichera en vert à la fin du script.
