@@ -22,9 +22,9 @@ Ce script Bash permet d'automatiser entièrement la préparation d'une machine v
 
 Pour déployer Cockpit, nous vous recommandons d'utiliser le menu interactif global de ce dépôt. Sur votre machine vierge, lancez simplement la commande suivante :
 
-\`\`\`bash
+```bash
 sudo apt update -y && sudo apt install -y curl && curl -sO https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/menu.sh && bash menu.sh
-\`\`\`
+```
 
 Choisissez ensuite **"Installer un service"** puis sélectionnez **Cockpit** dans la liste. Laissez-vous guider par les questions interactives à l'écran.
 
