@@ -22,6 +22,7 @@ Pour déployer Apache 2 & Webmin, nous vous recommandons d'utiliser le menu inte
 
 ```bash
 sudo apt update -y && sudo apt install -y curl && curl -sO [https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/menu.sh](https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/menu.sh) && bash menu.sh
+```
 
 🏁 Après l'installation (Procédure de mise en place)
 Une fois le script terminé et le serveur redémarré :
