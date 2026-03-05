@@ -57,6 +57,14 @@ Outils de gestion d'environnements Docker. Portainer offre une interface Web com
 * **Prérequis :** Avoir déjà installé Docker sur la machine cible (Ce script ne configure pas le réseau statique, il se greffe sur l'existant).
 
 ---
+## ⚙️ Maintenabilité : Comment ajouter un nouveau script au menu ?
+
+Ce dépôt utilise un menu interactif dynamique (`menu.sh`). Pour faire évoluer ce catalogue et y ajouter un nouvel outil, merci de respecter la procédure (SOP) suivante :
+1. **Le Script :** Ajouter le script à la racine avec l'extension `.sh` (ex: `install_outil.sh`).
+2. **La Doc :** Ajouter la documentation dans le dossier `documentation/` sous le nom exact `README_install_outil.md`.
+3. **Le Déclencheur :** Déclarer l'outil dans ce README sous le format strict : `### X. Titre (install_outil.sh)`.
+
+Auteur : Valentin Prades | Licence : MIT
 
 ## 🚀 Comment utiliser ces scripts (Méthode One-Liner)
 
@@ -64,5 +72,3 @@ Pour déployer l'un de ces services sur une machine virtuelle vierge (Debian 12 
 
 ```bash
 sudo apt update -y && sudo apt install -y curl && curl -sO https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/menu.sh && bash menu.sh
-
-Auteur : Valentin Prades | Licence : MIT
