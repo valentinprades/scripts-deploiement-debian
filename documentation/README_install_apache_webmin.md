@@ -27,13 +27,13 @@ sudo apt update -y && sudo apt install -y curl && curl -sO [https://raw.githubus
 ## 🚀 Après l'installation (Procédure de mise en place)
 Une fois le script terminé et le serveur redémarré :
 
-Étape 1 : Vérification Web
+1. Vérification Web
 
 Ouvrez votre navigateur et saisissez : http://VOTRE_IP_STATIQUE
 
 Vous devriez voir la page d'accueil personnalisée confirmant que le serveur Apache est opérationnel.
 
-Étape 2 : Connexion à Webmin
+2. Connexion à Webmin
 
 Rendez-vous sur : https://VOTRE_IP_STATIQUE:10000
 
@@ -41,7 +41,7 @@ Note : Votre navigateur affichera une alerte de sécurité. Cliquez sur "Paramè
 
 Connectez-vous avec votre utilisateur Linux habituel (celui utilisé pour le SSH).
 
-Étape 3 : Gestion du serveur
+3. Gestion du serveur
 
 Dans le menu de gauche, allez dans Serveurs > Serveur Web Apache.
 
