@@ -56,6 +56,9 @@ Socle idéal pour monter un serveur web classique couplé à une interface d'adm
 Outils de gestion d'environnements Docker. Portainer offre une interface Web complète, et Lazydocker propose une interface terminal ultra-rapide (TUI).
 * **Prérequis :** Avoir déjà installé Docker sur la machine cible (Ce script ne configure pas le réseau statique, il se greffe sur l'existant).
 
+### 7. 🛩️ Interface d'Administration Cockpit (install_cockpit.sh)
+Déploie Cockpit, une interface web moderne et légère pour l'administration système centralisée, la gestion du stockage (storaged) et la surveillance en temps réel de votre serveur Debian.
+
 ---
 
 ## 🚀 Comment utiliser ces scripts (Méthode One-Liner)
