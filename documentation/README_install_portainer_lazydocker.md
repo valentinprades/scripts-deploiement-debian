@@ -1,0 +1,41 @@
+# 🐳 Installation Automatisée : Portainer & Lazydocker
+
+Ce script Bash permet d'installer et de configurer rapidement les deux meilleurs outils de gestion pour votre environnement Docker : **Portainer** (Interface Web) et **Lazydocker** (Interface Terminal). 
+
+Il a été pensé pour être robuste, sécurisé et idéal pour un environnement Homelab (comme une VM ou un conteneur LXC sous Proxmox).
+
+## ✨ Fonctionnalités
+
+* **Escalade Sudo automatique :** Si vous oubliez de lancer le script en tant qu'administrateur, il relancera la commande automatiquement avec `sudo`.
+* **Tests de prérequis :** Vérifie la connexion Internet et la présence de Docker avant de lancer la moindre installation.
+* **Déploiement de Portainer CE :** Crée un volume persistant (`portainer_data`) pour ne pas perdre vos configurations lors des mises à jour, et déploie le conteneur sur les ports par défaut.
+* **Installation de Lazydocker :** Télécharge la dernière version officielle et la rend accessible à tous les utilisateurs du système.
+* **Affichage dynamique :** Détecte l'adresse IP locale de votre serveur pour générer un lien cliquable vers l'interface Web à la fin de l'installation.
+
+## 📋 Prérequis
+
+Avant d'exécuter ce script, assurez-vous que :
+1. Vous êtes sur une machine Linux (Debian, Ubuntu, etc.).
+2. **Docker est déjà installé** et fonctionnel sur votre machine.
+3. Votre utilisateur possède les droits `sudo`.
+
+## 🚀 Utilisation
+
+1. Créez un nouveau fichier nommé `install_portainer_lazydocker.sh` sur votre serveur :
+   ```bash
+   nano install_portainer_lazydocker.sh
+
+2. Collez le code du script dans ce fichier et sauvegardez.
+
+3. Lancez l'installation :
+
+bash install_portainer_lazydocker.sh
+
+🎮 Accès aux outils
+Une fois le script terminé avec succès, vous pourrez accéder à vos outils :
+
+Portainer (Web) : Ouvrez votre navigateur et allez sur https://<VOTRE_IP_SERVEUR>:9443. 
+(Note : votre navigateur affichera un avertissement de sécurité la première fois, c'est normal car c'est un certificat auto-signé).
+
+Lazydocker (Terminal) : Tapez simplement la commande suivante dans votre terminal :
+lazydocker ou sudo lazydocker
