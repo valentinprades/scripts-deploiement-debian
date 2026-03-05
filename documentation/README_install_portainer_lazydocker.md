@@ -21,15 +21,11 @@ Avant d'exécuter ce script, assurez-vous que :
 
 ## 🚀 Utilisation
 
-1. Créez un nouveau fichier nommé `install_portainer_lazydocker.sh` sur votre serveur :
-   ```bash
-   nano install_portainer_lazydocker.sh
+Pour déployer Portainer et Lazydocker, utilisez le menu interactif global de ce dépôt. Sur votre machine, lancez simplement la commande suivante :
 
-2. Collez le code du script dans ce fichier et sauvegardez.
-
-3. Lancez l'installation :
-
-bash install_portainer_lazydocker.sh
+```bash
+sudo apt update -y && sudo apt install -y curl && curl -sO [https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/menu.sh](https://raw.githubusercontent.com/valentinprades/scripts-deploiement-debian/main/menu.sh) && bash menu.sh
+```
 
 🎮 Accès aux outils
 Une fois le script terminé avec succès, vous pourrez accéder à vos outils :
