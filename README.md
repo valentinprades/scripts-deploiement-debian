@@ -56,17 +56,20 @@ Socle idéal pour monter un serveur web classique couplé à une interface d'adm
 Outils de gestion d'environnements Docker. Portainer offre une interface Web complète, et Lazydocker propose une interface terminal ultra-rapide (TUI).
 * **Prérequis :** Avoir déjà installé Docker sur la machine cible (Ce script ne configure pas le réseau statique, il se greffe sur l'existant).
 
-### 7. 🛩️ Interface d'Administration Cockpit (install_cockpit.sh)
+### 7. 🛩️ Cockpit Interface d'Administration (install_cockpit.sh)
 Déploie Cockpit, une interface web moderne et légère pour l'administration système centralisée, la gestion du stockage (storaged) et la surveillance en temps réel de votre serveur Debian.
 
-### 8. 🔄 Sauvegarde d'Équipements Réseau Oxidized (install_oxidized.sh)
+### 8. 🔄 Oxidized Sauvegarde d'Équipements Réseau (install_oxidized.sh)
 Déploie Oxidized (via Docker ou Natif Ruby) avec versioning Git automatique pour sauvegarder à intervalle régulier les configurations de tous vos équipements réseau (Switchs, Routeurs, Firewall). Port GUI et source de données modifiables à l'installation.
 
-### 9. 📊 Monitoring Léger Beszel (install_beszel.sh)
+### 9. 📊 Beszel Monitoring Léger (install_beszel.sh)
 Déploie l'écosystème Beszel (choix interactif entre le Serveur Hub ou l'Agent Client) via Docker. Une solution de supervision de serveurs et de conteneurs ultra-moderne, épurée et très peu gourmande en ressources.
 
-### 10. 🥑 Passerelle Bureau à Distance Apache Guacamole (install_guacamole.sh)
+### 10. 🥑 Guacamole Passerelle Bureau à Distance Apache (install_guacamole.sh)
 Déploie l'écosystème complet Guacamole (Guacd, PostgreSQL, Tomcat Web) via Docker Compose. Permet l'accès RDP/SSH/VNC directement depuis un navigateur. Script ultra-robuste avec génération automatique de mots de passe aléatoires et compatibilité avec les dernières normes de l'application (v1.6+).
+
+### 11. 📈 Uptime Kuma Veilleur de Statut (install_uptime-kuma.sh)
+Déploie Uptime Kuma via Docker Compose. Un tableau de bord de supervision ultra-réactif qui vérifie l'accessibilité de vos services (Ping, HTTP, TCP) à intervalle régulier et vous notifie en cas de panne (Telegram, Discord, etc.). Port GUI et accès au socket Docker modifiables interactivement.
 
 ---
 
