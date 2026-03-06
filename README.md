@@ -62,6 +62,9 @@ Déploie Cockpit, une interface web moderne et légère pour l'administration sy
 ### 8. 🔄 Sauvegarde d'Équipements Réseau Oxidized (install_oxidized.sh)
 Déploie Oxidized (via Docker ou Natif Ruby) avec versioning Git automatique pour sauvegarder à intervalle régulier les configurations de tous vos équipements réseau (Switchs, Routeurs, Firewall). Port GUI et source de données modifiables à l'installation.
 
+### 9. 📊 Monitoring Léger Beszel (install_beszel.sh)
+Déploie l'écosystème Beszel (choix interactif entre le Serveur Hub ou l'Agent Client) via Docker. Une solution de supervision de serveurs et de conteneurs ultra-moderne, épurée et très peu gourmande en ressources.
+
 ---
 
 ## 🚀 Comment utiliser ces scripts (Méthode One-Liner)
