@@ -59,6 +59,9 @@ Outils de gestion d'environnements Docker. Portainer offre une interface Web com
 ### 7. 🛩️ Interface d'Administration Cockpit (install_cockpit.sh)
 Déploie Cockpit, une interface web moderne et légère pour l'administration système centralisée, la gestion du stockage (storaged) et la surveillance en temps réel de votre serveur Debian.
 
+### 8. 🔄 Sauvegarde d'Équipements Réseau Oxidized (install_oxidized.sh)
+Déploie Oxidized (via Docker ou Natif Ruby) avec versioning Git automatique pour sauvegarder à intervalle régulier les configurations de tous vos équipements réseau (Switchs, Routeurs, Firewall). Port GUI et source de données modifiables à l'installation.
+
 ---
 
 ## 🚀 Comment utiliser ces scripts (Méthode One-Liner)
