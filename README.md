@@ -65,6 +65,9 @@ Déploie Oxidized (via Docker ou Natif Ruby) avec versioning Git automatique pou
 ### 9. 📊 Monitoring Léger Beszel (install_beszel.sh)
 Déploie l'écosystème Beszel (choix interactif entre le Serveur Hub ou l'Agent Client) via Docker. Une solution de supervision de serveurs et de conteneurs ultra-moderne, épurée et très peu gourmande en ressources.
 
+### 10. 🥑 Passerelle Bureau à Distance Apache Guacamole (install_guacamole.sh)
+Déploie l'écosystème complet Guacamole (Guacd, PostgreSQL, Tomcat Web) via Docker Compose. Permet l'accès RDP/SSH/VNC directement depuis un navigateur. Script ultra-robuste avec génération automatique de mots de passe aléatoires et compatibilité avec les dernières normes de l'application (v1.6+).
+
 ---
 
 ## 🚀 Comment utiliser ces scripts (Méthode One-Liner)
