@@ -71,6 +71,9 @@ Déploie l'écosystème complet Guacamole (Guacd, PostgreSQL, Tomcat Web) via Do
 ### 11. 📈 Uptime Kuma Veilleur de Statut (install_uptime-kuma.sh)
 Déploie Uptime Kuma via Docker Compose. Un tableau de bord de supervision ultra-réactif qui vérifie l'accessibilité de vos services (Ping, HTTP, TCP) à intervalle régulier et vous notifie en cas de panne (Telegram, Discord, etc.). Port GUI et accès au socket Docker modifiables interactivement.
 
+### 12. 🌐 Nginx Proxy Manager (install_npm.sh)
+Déploie l'ultime Reverse Proxy pour Homelab. Gère vos noms de domaine locaux ou publics et génère des certificats HTTPS (SSL) valides via Let's Encrypt avec une interface web ultra-simple. Choix interactif du port d'administration et du moteur de base de données (SQLite ou MariaDB). Ports 80/443 automatiquement gérés par UFW.
+
 ---
 
 ## 🚀 Comment utiliser ces scripts (Méthode One-Liner)
