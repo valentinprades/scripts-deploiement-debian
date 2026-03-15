@@ -74,6 +74,9 @@ Déploie Uptime Kuma via Docker Compose. Un tableau de bord de supervision ultra
 ### 12. 🌐 Nginx Proxy Manager (install_npm.sh)
 Déploie l'ultime Reverse Proxy pour Homelab. Gère vos noms de domaine locaux ou publics et génère des certificats HTTPS (SSL) valides via Let's Encrypt avec une interface web ultra-simple. Choix interactif du port d'administration et du moteur de base de données (SQLite ou MariaDB). Ports 80/443 automatiquement gérés par UFW.
 
+### 13. 🔒 Coffre-fort Vaultwarden (install_vaultwarden.sh)
+Déploie l'alternative ultra-légère au serveur Bitwarden pour héberger vos mots de passe à la maison. L'installateur ferme nativement les inscriptions libres pour des raisons de sécurité, gère la création de l'Admin Token (généré ou manuel) et stocke les données via SQLite. Nécessite d'être couplé à Nginx Proxy Manager pour le HTTPS.
+
 ---
 
 ## 🚀 Comment utiliser ces scripts (Méthode One-Liner)
